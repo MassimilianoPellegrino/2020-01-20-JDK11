@@ -88,22 +88,6 @@ public class Model {
 		int size = Graphs.neighborListOf(grafo, last).size();
 		int x = 0;
 		
-		/*for(Author a: Graphs.neighborListOf(grafo, last)) {
-			if(first.equals(last) && partW==0)
-				partW = grafo.getEdgeWeight(grafo.getEdge(last, a));
-			if(partSol.contains(a) || grafo.getEdgeWeight(grafo.getEdge(last, a)) != partW)
-				x++;
-		}
-		
-		if(x>=size) {
-			System.out.println(bestSol.size());
-			if(partSol.size()>bestSol.size()) {
-				bestSol = new ArrayList<>(partSol);
-				bestW = partW;
-			}
-			return;
-		}*/
-		
 		for(Author a: Graphs.neighborListOf(grafo, last)) {
 			
 			if(!partSol.contains(a)) {
@@ -121,7 +105,7 @@ public class Model {
 		}
 		
 		if(x==size) {
-			//System.out.println(bestSol.size());
+			//System.out.println(x);
 			if(partSol.size()>bestSol.size()) {
 				bestSol = new ArrayList<>(partSol);
 				bestW = partW;

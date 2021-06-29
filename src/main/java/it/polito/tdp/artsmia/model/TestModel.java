@@ -8,8 +8,8 @@ public class TestModel {
 		
 		Model m = new Model();
 		
-		m.creaGrafo("Designer");
-		List<Author> lista = m.getCammino(3042);
+		m.creaGrafo("Calligrapher");
+		List<Author> lista = m.getCammino(3942);
 		
 		for(Author a: lista)
 			System.out.println(a);
