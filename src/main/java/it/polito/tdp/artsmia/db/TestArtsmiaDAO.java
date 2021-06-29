@@ -1,8 +1,11 @@
 package it.polito.tdp.artsmia.db;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import it.polito.tdp.artsmia.model.ArtObject;
+import it.polito.tdp.artsmia.model.Author;
 import it.polito.tdp.artsmia.model.Exhibition;
 
 public class TestArtsmiaDAO {
@@ -11,7 +14,7 @@ public class TestArtsmiaDAO {
 
 		ArtsmiaDAO dao = new ArtsmiaDAO();
 
-		System.out.println("Test objects:");
+		/*System.out.println("Test objects:");
 		List<ArtObject> objects = dao.listObjects();
 		System.out.println(objects.get(0));
 		System.out.println(objects.size());
@@ -19,7 +22,11 @@ public class TestArtsmiaDAO {
 		System.out.println("Test exhibitions:");
 		List<Exhibition> exhibitions = dao.listExhibitions();
 		System.out.println(exhibitions.get(0));
-		System.out.println(exhibitions.size());
+		System.out.println(exhibitions.size());*/
+		
+		Map<Integer, Author> map = new HashMap<>();
+		dao.getVertici("Photographer", map);
+		dao.getArchi("Photographer", map);
 
 	}
 
